@@ -1,0 +1,18 @@
+.Header {
+    position: relative;
+    background: url('/assets/hero3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 850px;
+    .arrow-down {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        bottom: 100px;
+        @include respond(xl){
+            bottom: 100px;
+        }
+    }
+}

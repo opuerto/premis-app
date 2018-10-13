@@ -1,0 +1,16 @@
+.contain {
+    margin: 0 auto;
+    @include respond(sm) {
+        width: 556px;
+    }
+    @include respond(md){
+        width: 748px;
+    }
+    @include respond(lg){
+        width: 734px;
+    }
+    @include respond(xl){
+        width: 1200px;
+       
+    }
+}

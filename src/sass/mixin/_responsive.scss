@@ -1,0 +1,39 @@
+// Breakpoint viewport sizes and media queries.
+//
+// Breakpoints are defined as a map of (name: minimum width), order from small to large:
+//
+//    (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+//
+// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.
+
+// Name of the next breakpoint, or null for the last breakpoint.
+//
+//    >> breakpoint-next(sm)
+//    md
+//    >> breakpoint-next(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    md
+//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
+//    md
+
+//min-width means greater or equal 
+//max-width less or equal
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == xs {
+      @media (min-width: 0) {@content}; 
+    }
+    @if $breakpoint == sm {
+      @media (min-width: 576px) {@content}; 
+    }
+    @if $breakpoint == md {
+        @media ( min-width: 768px) {@content}; 
+    }
+    @if $breakpoint == lg {
+        @media (min-width: 992px) {@content}; 
+    }
+    @if $breakpoint == xl {
+        @media (min-width: 1200px) {@content}; 
+    }
+   
+  }
