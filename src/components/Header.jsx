@@ -15,7 +15,7 @@ const Header = props => {
         </figure>
       </section>
       <div className="stroke">
-        <img src="/assets/stroke.png" alt=""/>
+        <img src="assets/util/stroke.png" alt=""/>
       </div>
     </div>
   );
