@@ -1,0 +1,160 @@
+.footer {
+    margin-top: 206px;
+    padding-bottom: 186px;
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        @include respond(xl) {
+            flex-direction: row;
+        }
+        &__left {
+            display: flex;
+            flex-basis: 50%;
+            justify-content: space-between;
+            flex-direction: column;
+            @include respond(sm) {
+                flex-direction: row;
+            }
+            .premis-info, .premis-menu {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 50%;
+               align-items: center;
+               @include respond(xl) {
+                   align-items: flex-start;
+               }
+
+                &__logo {
+                    margin-bottom: 32px;
+                    img.logo {
+                        width: 100px;
+                        height: 60px;
+                    }
+                }
+                &__address {
+                    color:$footerText;
+                    font-size: 14px;
+                    width: 120px;
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+
+            .premis-menu {
+               
+                &__title {
+                    display: flex;
+                    align-items: flex-end;
+                    font-size: 20px;
+                    color: $title;
+                    font-weight: 800;
+                    height: 60px;
+                    margin-bottom: 32px;
+                }
+                &__ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    a{
+                        &:link, &:visited, &:hover {
+                            color:$footerText;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__right {
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 50%;
+            flex-direction: column;
+            @include respond(sm) {
+                flex-direction: row;
+            }
+            .footer-social, .footer-post {
+                display: flex;
+                flex-basis: 50%;
+                flex-direction: column;
+                align-items: center;
+               @include respond(xl) {
+                   align-items: flex-start;
+               }
+                &__title {
+                    display: flex;
+                    align-items: flex-end;
+                    font-size: 20px;
+                    color: $title;
+                    font-weight: 800;
+                    height: 60px;
+                    margin-bottom: 32px;
+                }
+
+                &__ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    li {
+                        &:not(:last-child) {
+                            margin-right: 9px;
+                        }
+                    }
+                }
+
+                &__input {
+                    position: relative;
+                    margin-top: 32px;
+                    width: 100%;
+                    .post-input {
+                        width: 100%;
+                        border-radius: 28px;
+                        border:1px solid black;
+                        box-shadow: none;
+                        background: #292937;
+                        padding: 17px 27px;
+                        color:$footerText;
+                        font-size: 14px;
+                        &::placeholder { 
+                            color:$footerText;
+                            font-size: 14px;
+                        }
+                        
+                    }
+
+                    img.input-envelope {
+                        position: absolute;
+                        top:15px;
+                        right: 27px;
+                        width: 30px;
+                        height: 26px;
+                    }
+                }
+            
+            }
+
+            .footer-post {
+                margin-left: 20px;
+                margin-right: 20px;
+                @include respond(sm){
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                &__text {
+                    font-size: 14px;
+                    color: $footerText;
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+            
+            
+        }
+    }
+
+}

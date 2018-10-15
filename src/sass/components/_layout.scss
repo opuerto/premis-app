@@ -14,3 +14,23 @@
        
     }
 }
+
+.row {
+    margin-right:0 !important;
+    margin-left: 0 !important;
+    @include respond(sm){
+        margin-right:-15px !important;
+        margin-left: -15px !important;
+    }
+}
+
+.col--center {
+    
+    display: flex;
+    justify-content: center;
+
+    @include respond(xl){
+        display: block;
+        
+    }
+}
