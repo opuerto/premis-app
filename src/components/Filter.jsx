@@ -35,7 +35,7 @@ class Filter extends Component {
     const { filterNews } = this.props;
     filterNews(id);
     this.categoryActive(id);
-    console.log(id);
+    
   };
 
   categoryActive = id => {
